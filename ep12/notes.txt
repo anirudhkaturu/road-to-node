@@ -1,0 +1,9 @@
+REST API or RESTful API
+REpresentational State Transfer (REST)
+
+Rules for REST:
+1. Follows Server-Client architecture
+2. The Client and Server must be independent of each other
+3. Uses the HTTP methods GET, POST, PUT, PATCH< DELETE (CRUD Opertions)
+4. User standard protocol XML or JSON
+5. Can use CSR-Client Side Rendering or SSR-Server Side Rendering
