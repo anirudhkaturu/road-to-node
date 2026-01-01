@@ -5,33 +5,15 @@ const urlSchema = mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        // can add index
+        // can add indexing later in the future
     },
     original_url: {
         type: String,
         required: true,
     },
-    click_count: {
-        type: Number,
-        default: 0,
-        min: 0
-    },
-    is_active: {
-        type: Boolean,
-        default: true
-    },
-    expires_at: {
-        type: Date,
-        default: null
-    },
-    last_accessed_at: {
-        type: Date,
-        default: null
-    },
-}, {
-    timestamps: {
-        createdAt: "created_at",
-        updatedAt: "updated_at",
+    click_times: {
+        type: [Date],
+        default: []
     }
 });
 

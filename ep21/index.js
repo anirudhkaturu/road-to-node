@@ -13,7 +13,11 @@ app.get("/", (req, res) => {
     return res.send("WELCOME");
 })
 
-connectDB(MONGO_DB);
-app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}`);
+connectDB(MONGO_DB).then(() => {
+    console.log("MongoDB connected successfully");
+    app.listen(PORT, () => {
+      console.log(`Server started on http://localhost:${PORT}`);
+    });
+}).catch(err => {
+    console.log(`Error: ${err}`);
 });
